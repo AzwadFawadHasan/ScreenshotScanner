@@ -6,16 +6,9 @@
 
 A heuristic-based tool to detect whether an image is a screenshot or a photo of a physical document.
 
-## 🎯 Use Cases
 
-ScreenshotScanner is particularly effective at detecting if images of identity documents are screenshots rather than photos of physical documents:
 
-- **Passport verification** - Detect screenshot submissions vs. real passport photos
-- **ID card validation** - Verify driver's licenses and national ID cards
-- **Document authentication** - Prevent fraudulent screenshot submissions
-- **KYC/AML compliance** - Enhance identity verification processes
-
-## ✨ Features
+##  Features
 
 - **13 Heuristic Checks** - Multiple detection methods for high accuracy
 - **Simple API** - Easy to integrate into existing workflows
@@ -23,7 +16,7 @@ ScreenshotScanner is particularly effective at detecting if images of identity d
 - **No Training Required** - Rule-based system, no ML models needed
 - **Fast Processing** - Analyze images in milliseconds
 
-## 📦 Installation
+## Installation
 
 ### Basic Installation
 
@@ -32,7 +25,7 @@ pip install ScreenshotScanner
 ```
 
 
-## 🚀 Quick Start
+## Quick Start
 
 ```python
 from screenshot_scanner import ScreenshotScanner
@@ -59,7 +52,7 @@ print(result)
 
 **That's it!** Just 3 lines of code to detect screenshots.
 
-
+<!-- 
 ## 📖 Advanced Usage
 
 ### Accessing Detailed Information
@@ -122,9 +115,9 @@ for filename in os.listdir(image_folder):
         image_path = os.path.join(image_folder, filename)
         result = scanner.process(image_path)
         print(f"{filename}: {result['is_screenshot']} (score: {result['score']})")
-```
+``` -->
 
-## 🔍 How It Works
+## How It Works
 
 ScreenshotScanner uses 13 different heuristic checks to determine if an image is a screenshot:
 
@@ -148,43 +141,26 @@ Each check contributes to a final score. A score ≥ 5 (default threshold) indic
 
 Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-### Development Setup
 
-```bash
-# Clone the repository
-git clone https://github.com/AzwadFawadHasan/ScreenshotScanner.git
-cd ScreenshotScanner
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install in development mode
-pip install -e .
-
-# Run tests
-python -m pytest tests/
-```
-
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+##  Motivation
 
-- Built with OpenCV, NumPy, SciPy, Pillow, and pytesseract
-- Inspired by the need for better document verification in KYC processes
+- There is no good tool without ML to detect screenshots. So i decided to come up with this.
 
-## 📧 Contact
+## Contact
 
 - **Author**: AzwadFawadHasan
 - **GitHub**: [@AzwadFawadHasan](https://github.com/AzwadFawadHasan)
 - **Issues**: [GitHub Issues](https://github.com/AzwadFawadHasan/ScreenshotScanner/issues)
 
-## ⭐ Star History
+## Star
 
 If you find this project useful, please consider giving it a star on GitHub!
 
 ---
 
-Made with ❤️ for better document verification
+Made with ❤️ for better document verification by AzwadFawadHasan
