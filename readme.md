@@ -1,8 +1,10 @@
 # ScreenshotScanner
 
-[![PyPI version](https://badge.fury.io/py/ScreenshotScanner.svg)](https://badge.fury.io/py/ScreenshotScanner)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![PyPI](https://img.shields.io/pypi/v/ScreenshotScanner.svg?logo=pypi&logoColor=959DA5&color=blue)](https://pypi.org/project/ScreenshotScanner/)
+[![Downloads](https://static.pepy.tech/badge/ScreenshotScanner)](https://pypistats.org/packages/screenshotscanner)
+[![CodeQL](https://github.com/AzwadFawadHasan/ScreenshotScanner/actions/workflows/codeql.yml/badge.svg)](https://github.com/AzwadFawadHasan/ScreenshotScanner/actions/workflows/codeql.yml)
 
 A heuristic-based tool to detect whether an image is a screenshot or a photo of a physical document.
 
