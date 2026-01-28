@@ -7,7 +7,7 @@ name = "ScreenshotScanner"
 version = "0.1.0"
 description = "A heuristic-based tool to detect whether an image is a screenshot"
 readme = "README.md"
-authors = [{name = "AzwadFawadHasan", email = "your.email@example.com"}]
+authors = [{name = "AzwadFawadHasan", email = "azwadfawadhasan@gmail.com"}]
 license = {text = "MIT"}
 classifiers = [
     "Development Status :: 4 - Beta",
