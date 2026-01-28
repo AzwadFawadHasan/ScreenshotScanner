@@ -13,7 +13,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="ScreenshotScanner",
-    version="0.1.0",
+    version="0.1.1",
     author="AzwadFawadHasan",
     author_email="azwadfawadhasan@gmail.com",
     description="A heuristic-based tool to detect whether an image is a screenshot",
