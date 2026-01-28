@@ -8,7 +8,7 @@
 
 A heuristic-based tool to detect whether an image is a screenshot or a photo of a physical document.
 
-
+Star this repo if it helped you.
 
 ##  Features
 
@@ -139,7 +139,7 @@ ScreenshotScanner uses 13 different heuristic checks to determine if an image is
 
 Each check contributes to a final score. A score ≥ 5 (default threshold) indicates a screenshot.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
