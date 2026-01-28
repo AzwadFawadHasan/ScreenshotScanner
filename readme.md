@@ -1,14 +1,22 @@
-# ScreenshotScanner
+<p align="center">
+  <img src="ScreenshotScanner.png" alt="ScreenshotScanner Logo" width="250">
+</p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![PyPI](https://img.shields.io/pypi/v/ScreenshotScanner.svg?logo=pypi&logoColor=959DA5&color=blue)](https://pypi.org/project/ScreenshotScanner/)
-[![Downloads](https://static.pepy.tech/badge/ScreenshotScanner)](https://pypistats.org/packages/screenshotscanner)
-[![CodeQL](https://github.com/AzwadFawadHasan/ScreenshotScanner/actions/workflows/codeql.yml/badge.svg)](https://github.com/AzwadFawadHasan/ScreenshotScanner/actions/workflows/codeql.yml)
+<h1 align="center">ScreenshotScanner</h1>
 
-A heuristic-based tool to detect whether an image is a screenshot or a photo of a physical document.
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python 3.8+"></a>
+  <a href="https://pypi.org/project/ScreenshotScanner/"><img src="https://img.shields.io/pypi/v/ScreenshotScanner.svg?logo=pypi&logoColor=959DA5&color=blue" alt="PyPI"></a>
+  <a href="https://pypistats.org/packages/screenshotscanner"><img src="https://static.pepy.tech/badge/ScreenshotScanner" alt="Downloads"></a>
+  <a href="https://github.com/AzwadFawadHasan/ScreenshotScanner/actions/workflows/codeql.yml"><img src="https://github.com/AzwadFawadHasan/ScreenshotScanner/actions/workflows/codeql.yml/badge.svg" alt="CodeQL"></a>
+</p>
 
-Star this repo if it helped you.
+<p align="center">
+  A heuristic-based tool to detect whether an image is a screenshot or a photo of a physical document.
+  <br>
+  <b>Star this repo if it helped you!</b>
+</p>
 
 ##  Features
 
