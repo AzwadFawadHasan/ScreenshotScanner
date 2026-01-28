@@ -7,9 +7,9 @@
 <p align="center">
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
   <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python 3.8+"></a>
-  <a href="https://pypi.org/project/ScreenshotScanner/"><img src="https://img.shields.io/pypi/v/ScreenshotScanner.svg?logo=pypi&logoColor=959DA5&color=blue" alt="PyPI"></a>
-  <a href="https://pypistats.org/packages/screenshotscanner"><img src="https://static.pepy.tech/badge/ScreenshotScanner" alt="Downloads"></a>
-  <a href="https://github.com/AzwadFawadHasan/ScreenshotScanner/actions/workflows/codeql.yml"><img src="https://github.com/AzwadFawadHasan/ScreenshotScanner/actions/workflows/codeql.yml/badge.svg" alt="CodeQL"></a>
+  <a href="https://pypi.org/project/ScreenshotScanner/"><img src="https://img.shields.io/pypi/v/screenshotscanner.svg?logo=pypi&logoColor=white" alt="PyPI version"></a>
+  <a href="https://pypi.org/project/ScreenshotScanner/"><img src="https://img.shields.io/pypi/dm/screenshotscanner.svg?color=blue" alt="Downloads"></a>
+  <a href="https://github.com/AzwadFawadHasan/ScreenshotScanner/actions/workflows/codeql.yml"><img src="https://github.com/AzwadFawadHasan/ScreenshotScanner/actions/workflows/codeql.yml/badge.svg" alt="CodeQL Status"></a>
 </p>
 
 <p align="center">
