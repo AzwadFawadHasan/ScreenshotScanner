@@ -15,7 +15,7 @@ setup(
     name="ScreenshotScanner",
     version="0.1.0",
     author="AzwadFawadHasan",
-    author_email="your.email@example.com",
+    author_email="azwadfawadhasan@gmail.com",
     description="A heuristic-based tool to detect whether an image is a screenshot",
     long_description=long_description,
     long_description_content_type="text/markdown",
