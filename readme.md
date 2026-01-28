@@ -174,3 +174,5 @@ If you find this project useful, please consider giving it a star on GitHub!
 ---
 
 Made with ❤️ for better document verification by AzwadFawadHasan
+
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=AzwadFawadHasan.ScreenshotScanner)
