@@ -8,6 +8,6 @@ passports, IDs, or driver's licenses) is a screenshot rather than a photo of a p
 __version__ = "0.1.0"
 __author__ = "AzwadFawadHasan"
 
-from .detector import ScreenshotDetector
+from .scanner import ScreenshotScanner
 
-__all__ = ["ScreenshotDetector"]
+__all__ = ["ScreenshotScanner"]

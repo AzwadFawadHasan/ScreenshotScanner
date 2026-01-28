@@ -31,61 +31,57 @@ ScreenshotScanner is particularly effective at detecting if images of identity d
 pip install ScreenshotScanner
 ```
 
-### System Requirements
-
-ScreenshotScanner requires **Tesseract-OCR** to be installed on your system for text confidence analysis.
-
-**Windows:**
-```bash
-# Download and install from: https://github.com/UB-Mannheim/tesseract/wiki
-# Or use chocolatey:
-choco install tesseract
-```
-
-**macOS:**
-```bash
-brew install tesseract
-```
-
-**Linux:**
-```bash
-sudo apt-get install tesseract-ocr
-```
 
 ## 🚀 Quick Start
 
 ```python
-from screenshot_scanner import ScreenshotDetector
+from screenshot_scanner import ScreenshotScanner
 
-# Initialize detector
-detector = ScreenshotDetector()
+# Initialize scanner
+scanner = ScreenshotScanner()
 
-# Check if an image is a screenshot
-result = detector.is_screenshot("path/to/image.jpg")
+# Process an image (simple one-liner)
+result = scanner.process("path/to/image.jpg")
 
-print(f"Is screenshot: {result['is_screenshot']}")
-print(f"Confidence: {result['confidence']:.1f}%")
-print(f"Score: {result['score']}/10")
-print(f"Reasons: {', '.join(result['reasons'])}")
+print(result)
 ```
 
 ### Example Output
 
 ```python
-Is screenshot: True
-Confidence: 80.0%
-Score: 8/10
-Reasons: Has alpha channel, Common aspect ratio: 1.78, Low ELA: 45.32, No EXIF data, High sharpness: 156.23
+{
+    'is_screenshot': True,
+    'score': 8,
+    'confidence': 80.0,
+    'reasons': ['Has alpha channel', 'Common aspect ratio: 1.78', 'Low ELA: 45.32', 'No EXIF data', 'High sharpness: 156.23']
+}
 ```
+
+**That's it!** Just 3 lines of code to detect screenshots.
+
 
 ## 📖 Advanced Usage
 
-### Verbose Mode
-
-Get detailed metrics for all heuristic checks:
+### Accessing Detailed Information
 
 ```python
-result = detector.is_screenshot("image.jpg", verbose=True)
+result = scanner.process("image.jpg")
+
+# Access individual fields
+if result['is_screenshot']:
+    print(f"Screenshot detected with {result['confidence']:.1f}% confidence")
+    print(f"Detection score: {result['score']}/10")
+    print("Reasons:")
+    for reason in result['reasons']:
+        print(f"  - {reason}")
+```
+
+### Verbose Mode (All Metrics)
+
+For debugging or detailed analysis, use `is_screenshot()` with `verbose=True`:
+
+```python
+result = scanner.is_screenshot("image.jpg", verbose=True)
 
 # Access detailed metrics
 metrics = result['metrics']
@@ -102,10 +98,12 @@ Adjust the detection sensitivity:
 
 ```python
 # More strict (fewer false positives)
-strict_detector = ScreenshotDetector(threshold=7)
+strict_scanner = ScreenshotScanner(threshold=7)
 
 # More lenient (fewer false negatives)
-lenient_detector = ScreenshotDetector(threshold=3)
+lenient_scanner = ScreenshotScanner(threshold=3)
+
+result = strict_scanner.process("image.jpg")
 ```
 
 ### Batch Processing
@@ -114,15 +112,15 @@ Process multiple images:
 
 ```python
 import os
-from screenshot_scanner import ScreenshotDetector
+from screenshot_scanner import ScreenshotScanner
 
-detector = ScreenshotDetector()
+scanner = ScreenshotScanner()
 image_folder = "path/to/images"
 
 for filename in os.listdir(image_folder):
     if filename.endswith(('.jpg', '.png', '.jpeg')):
         image_path = os.path.join(image_folder, filename)
-        result = detector.is_screenshot(image_path)
+        result = scanner.process(image_path)
         print(f"{filename}: {result['is_screenshot']} (score: {result['score']})")
 ```
 

@@ -10,7 +10,7 @@ import cv2
 from typing import Dict, Union, Tuple
 
 
-class ScreenshotDetector:
+class ScreenshotScanner:
     """
     A heuristic-based detector to identify if an image is a screenshot.
     
@@ -35,16 +35,40 @@ class ScreenshotDetector:
     
     def __init__(self, threshold: int = 5):
         """
-        Initialize the ScreenshotDetector.
+        Initialize the ScreenshotScanner.
         
         Args:
             threshold: Minimum score to classify as screenshot (default: 5)
         """
         self.threshold = threshold
     
+    def process(self, image_path: str) -> Dict:
+        """
+        Process an image to detect if it's a screenshot (simple API).
+        
+        This is the recommended method for basic usage.
+        
+        Args:
+            image_path: Path to the image file
+            
+        Returns:
+            Dictionary containing:
+                - is_screenshot (bool): Whether the image is detected as a screenshot
+                - score (int): Detection score
+                - confidence (float): Confidence percentage
+                - reasons (list): List of reasons for detection
+                
+        Example:
+            >>> from screenshot_scanner import ScreenshotScanner
+            >>> scanner = ScreenshotScanner()
+            >>> result = scanner.process("passport.jpg")
+            >>> print(result)
+        """
+        return self.is_screenshot(image_path, verbose=False)
+    
     def is_screenshot(self, image_path: str, verbose: bool = False) -> Dict:
         """
-        Detect if an image is a screenshot.
+        Detect if an image is a screenshot (advanced API with verbose option).
         
         Args:
             image_path: Path to the image file
@@ -85,6 +109,7 @@ class ScreenshotDetector:
             result["metrics"] = metrics
         
         return result
+
     
     def _calculate_metrics(self, img: Image.Image, image_path: str) -> Dict:
         """Calculate all detection metrics."""

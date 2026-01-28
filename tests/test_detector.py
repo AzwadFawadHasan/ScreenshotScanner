@@ -1,31 +1,31 @@
-"""Unit tests for ScreenshotDetector."""
+"""Unit tests for ScreenshotScanner."""
 
 import unittest
 import os
-from screenshot_scanner import ScreenshotDetector
+from screenshot_scanner import ScreenshotScanner
 
 
-class TestScreenshotDetector(unittest.TestCase):
-    """Test cases for ScreenshotDetector class."""
+class TestScreenshotScanner(unittest.TestCase):
+    """Test cases for ScreenshotScanner class."""
     
     def setUp(self):
         """Set up test fixtures."""
-        self.detector = ScreenshotDetector()
+        self.scanner = ScreenshotScanner()
     
     def test_initialization(self):
-        """Test detector initialization."""
-        self.assertEqual(self.detector.threshold, 5)
+        """Test scanner initialization."""
+        self.assertEqual(self.scanner.threshold, 5)
         
-        custom_detector = ScreenshotDetector(threshold=7)
-        self.assertEqual(custom_detector.threshold, 7)
+        custom_scanner = ScreenshotScanner(threshold=7)
+        self.assertEqual(custom_scanner.threshold, 7)
     
-    def test_is_screenshot_returns_dict(self):
-        """Test that is_screenshot returns a dictionary with required keys."""
+    def test_process_returns_dict(self):
+        """Test that process returns a dictionary with required keys."""
         # This test requires a sample image in test_data folder
         test_image = os.path.join("..", "test_data", "sample_image.jpg")
         
         if os.path.exists(test_image):
-            result = self.detector.is_screenshot(test_image)
+            result = self.scanner.process(test_image)
             
             self.assertIsInstance(result, dict)
             self.assertIn('is_screenshot', result)
@@ -43,7 +43,7 @@ class TestScreenshotDetector(unittest.TestCase):
         test_image = os.path.join("..", "test_data", "sample_image.jpg")
         
         if os.path.exists(test_image):
-            result = self.detector.is_screenshot(test_image, verbose=True)
+            result = self.scanner.is_screenshot(test_image, verbose=True)
             
             self.assertIn('metrics', result)
             self.assertIsInstance(result['metrics'], dict)
@@ -62,14 +62,14 @@ class TestScreenshotDetector(unittest.TestCase):
     def test_file_not_found(self):
         """Test handling of non-existent file."""
         with self.assertRaises(FileNotFoundError):
-            self.detector.is_screenshot("nonexistent_file.jpg")
+            self.scanner.process("nonexistent_file.jpg")
     
     def test_score_range(self):
         """Test that score is within valid range."""
         test_image = os.path.join("..", "test_data", "sample_image.jpg")
         
         if os.path.exists(test_image):
-            result = self.detector.is_screenshot(test_image)
+            result = self.scanner.process(test_image)
             
             self.assertGreaterEqual(result['score'], 0)
             self.assertLessEqual(result['score'], 15)  # Max possible score
@@ -79,7 +79,7 @@ class TestScreenshotDetector(unittest.TestCase):
         test_image = os.path.join("..", "test_data", "sample_image.jpg")
         
         if os.path.exists(test_image):
-            result = self.detector.is_screenshot(test_image)
+            result = self.scanner.process(test_image)
             
             self.assertGreaterEqual(result['confidence'], 0)
             self.assertLessEqual(result['confidence'], 100)
