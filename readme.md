@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="ScreenshotScanner.png" alt="ScreenshotScanner Logo" width="250">
+  <img src="https://raw.githubusercontent.com/AzwadFawadHasan/ScreenshotScanner/main/ScreenshotScanner.png" alt="ScreenshotScanner Logo" width="250" target="_blank">
 </p>
+
 
 <h1 align="center">ScreenshotScanner</h1>
 
